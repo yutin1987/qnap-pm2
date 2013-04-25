@@ -1,0 +1,71 @@
+@import 'compass'
+@import '../sass_lib/responsive.sass'
+@import 'app_layout.config'
+
+@media (orientation: portrait)
+  #viewport
+    .toolbar
+      a
+        position: relative
+        bottom: 3px
+        &.prev
+          margin-bottom: 0px
+          left: 3px
+        &.next
+          margin-bottom: 0px
+          right: 3px
+        &.back
+          bottom: 3px
+          right: -6px
+
+@media (max-device-width: 640px)
+  #viewport
+    $width: 320px
+    $height: 320px
+    .wrapper
+      width: $width
+    .line
+      .wrap
+        width: $width
+        height: $height
+      .item
+        height: $height - 6px
+        &.lo-horizontal
+          height: $height / 2 - 6px
+          &:first-child:last-child
+            height: $height - 6px
+    .album,
+    .private
+      .wrap
+        width: $width
+      .item
+        .thumb
+          height: $height - 50px - 12px - 8px
+    .photo
+      +column-count(1)
+
+@media (max-device-width: 640px) and (min-width: 321px)
+  #viewport
+    $width: 600px
+    $height: 600px
+    .wrapper
+      width: $width
+    .line
+      .wrap
+        width: $width
+        height: $height
+      .item
+        height: $height - 6px
+        &.lo-horizontal
+          height: $height / 2 - 6px
+          &:first-child:last-child
+            height: $height - 6px
+    .album,
+    .private
+      .wrap
+        width: $width
+      .item
+        .thumb
+          height: $height - 50px - 12px - 8px
+    .photo
+      +column-count(1)

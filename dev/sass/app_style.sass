@@ -1,0 +1,111 @@
+@import "compass"
+
+html
+  background-image: inline-image("bg.png")
+
+body
+  background: none
+
+#navbar
+  .navbar-inner
+    border-radius: 0px
+    vertical-align: middle
+    background-image: inline-image("nav_bg.png")
+    border: none
+
+#logo
+  background-image: inline-image("logo.png")
+
+#loading
+  background-image: inline-image("loading.gif")
+  background-size: 40px 40px
+
+#menu
+  background: #FFF
+  +single-box-shadow
+
+#menu-toggle
+  background-image: inline-image("menu.png")
+  &.hover
+    background-image: inline-image("menu_hover.png")
+
+#about
+  .icon
+    background-image: inline-image("photo_station_about.png")
+
+#mask
+  background: #FFF
+
+#init
+  .message
+    background-image: inline-image("loading.gif")
+
+#login
+  #login-submit
+    border: 1px #02305C solid
+    border-radius: 12px
+    color: #FFF
+    +background-image(linear-gradient(#2BC4FE, #075AB4))
+    &.hover
+      +background-image(linear-gradient(#157EC3, #013C8D))
+  .err-msg
+    color: #900
+  .remember
+    .box
+      background-image: inline-image("remember.png")
+      background-repeat: no-repeat
+      background-size: 234px 50px
+      border-radius: 72px
+      background-position: -92px 0px
+      +transition(background-position 0.2s ease-out)
+    &.checked
+      .box
+        background-position: 0px 0px
+  .input
+    background-image: inline-image("login_input.png")
+    .left
+      background-image: inline-image("login_input_left.png")
+    .right
+      background-image: inline-image("login_input_right.png")
+    .icon-usr
+      background-image: inline-image("login_usr.png")
+    .icon-pwd
+      background-image: inline-image("login_pwd.png")
+    input
+      border: none
+      background: none
+
+#viewport
+  .back,
+  .prev,
+  .next,
+    background-position: center center
+    background-size: contain
+    background-repeat: no-repeat
+  .back
+    background-image: inline-image("back.png")
+    &.hover
+      background-image: inline-image("back_hover.png")
+  .prev
+    background-image: inline-image("prev.png")
+    &.hover
+      background-image: inline-image("prev_hover.png")
+  .next
+    background-image: inline-image("next.png")
+    &.hover
+      background-image: inline-image("next_hover.png")
+  .line
+    .thumb
+      background: #FFF
+      border: 1px #777777 solid
+  .album,
+  .private
+    .item
+      background: #FFF
+      border: 1px solid #C0C0C0
+    .personal
+      background-image: inline-image("personal.png")
+  .photo
+    .item
+      background: #FFF
+      border: 1px solid #C0C0C0

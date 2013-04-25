@@ -1,0 +1,89 @@
+html
+  head
+    title PhotoMobile
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='author', content='JustinLiu')
+    link(rel='stylesheet', type='text/css', href='./style/bootstrap.css')
+    script(type='text/javascript', src='./script/jquery.js')
+    script(type='text/javascript', src='./script/bootstrap.js')
+    script(type='text/javascript', src='./script/backbone.js')
+    script(type='text/javascript', src='./script/helper.js')
+
+    script(type='text/javascript', src='./script/config.js')
+    script(type='text/javascript', src='./script/app.js')
+
+    link(rel='stylesheet', type='text/css', href='./style/app_layout.css')
+    link(rel='stylesheet', type='text/css', href='./style/app_style.css')
+
+  body.status-init(onselectstart="return false",onselect="return false")
+    #navbar.navbar.navbar-inverse
+      .navbar-inner
+        .container
+          #menu-toggle
+          #logo
+          #loading
+    #mask
+    #init
+      .message
+    #login
+      .form-horizontal
+        .input.input-username
+          .left
+          .right
+          i.icon-usr
+          input#username(type="text",placeholder="Username")
+        .input.input-password
+          .left
+          .right
+          i.icon-pwd
+          input#password(type="password",placeholder="Password")
+        .remember
+          label Remember me
+          .box
+        .err-msg Invalid username or password.
+        .toolbar
+          button#login-submit SIGN IN
+    #menu
+      ul.nav.nav-tabs.nav-stacked
+        li
+          a.goto-line(href='#display-line') Photo
+        li
+          a.goto-album(href='#display-album') Album
+        li
+          a.goto-private(href='#display-album') Private Collection
+        li.divider
+        li
+          a.goto-logout(href='#logout') Logout
+        li.divider
+        li
+          a.goto-desktop(href='../') Desktop View
+        li
+          a.goto-about(href='#about') About
+    #about
+      .wrap
+        .icon
+        p Photo Station
+        p Version 
+          span#version
+        p: a(href='http://www.qnap.com/', target="_blank") www.qnap.com
+        p ©2013 QNAP Systems, Inc. All Rights Reserved.
+    #viewport.show-line
+      .wrapper
+        .line
+          .toolbar
+              a.next
+              a.prev
+        .album
+        .private
+        .photo
+          .toolbar
+              a.next
+              a.prev
+              a.back
+        .full
+          .toolbar
+            a.next
+            a.prev
+            a.back
