@@ -65,7 +65,7 @@ $(function() {
   album2dom = function(album) {
     var img, length, personal, src, thumb, time, title;
 
-    src = PATH + API.THUMB + '?f=' + album.get('id') + '&s=' + mode;
+    src = PATH + API.THUMB + '?f=' + album.get('cover') + '&s=' + mode;
     thumb = '<div class="thumb" style="background-image: url(' + src + ')" />';
     img = '<div class="img"><img src="' + src + '" /></div>';
     title = '<div class="title">' + album.get('title') + '</div>';
